@@ -1,0 +1,61 @@
+{
+  "name": "data-ripple",
+  "version": "0.1.0",
+  "description": "Universal ripple effect solution",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "lint": "eslint . --ext .ts",
+    "clean": "rm -rf lib",
+    "scripts": "./node_modules/.bin/ts-node scripts.ts",
+    "dev": "nodemon --config nodemon.json",
+    "drp": "npm publish --dry-run",
+    "tsc": "npm run lint && npm run clean && ./node_modules/.bin/tsc",
+    "build": "npm run lint && npm run clean && webpack && npm run scripts",
+    "prepublishOnly": "npm run build",
+    "preversion": "npm run lint",
+    "version": "npm run build && git add .",
+    "postversion": "git push && git push --tags"
+  },
+  "keywords": [
+    "ripple",
+    "ripple-effect",
+    "material-ripple"
+  ],
+  "author": "Danyil Moroz",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^13.7.4",
+    "@types/tinycolor2": "^1.4.2",
+    "@typescript-eslint/eslint-plugin": "^2.20.0",
+    "@typescript-eslint/parser": "^2.20.0",
+    "dts-bundle-generator": "^3.3.1",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-import-resolver-typescript": "^2.0.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-json": "^2.1.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "nodemon": "^2.0.2",
+    "ts-loader": "^6.2.1",
+    "ts-node": "^8.6.2",
+    "tslib": "^1.11.0",
+    "typescript": "^3.8.2",
+    "typescript-eslint": "0.0.1-alpha.0",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11"
+  },
+  "dependencies": {
+    "tinycolor2": "^1.4.1"
+  },
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mopcweb/data-ripple"
+  },
+  "bugs": {
+    "url": "https://github.com/mopcweb/data-ripple/issues/new"
+  },
+  "homepage": "https://github.com/mopcweb/data-ripple"
+}
