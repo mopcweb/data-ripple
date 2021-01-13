@@ -53,15 +53,6 @@ function handleMouseDown(e) {
 
 ## Options
 
-enterDuration: 550,
-exitDuration: 400,
-timingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)',
-sizeModifier: 1,
-disableCentering: false,
-fadeOutOnClick: false,
-opacity: 1,
-color: undefined,
-
 Declarative | Imperative | Type | Default | Description
 ----------- | ---------- | ---- | ------- | -----------
   color     | data-ripple-color | string | contrast (black/white) color for container background, 0.15 opacity | Ripple effect color (rgba, hsla, HEX)

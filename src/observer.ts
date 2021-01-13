@@ -30,6 +30,10 @@ export function rippleNodeObserver(rippleCustomOptions?: CustomRippleOptions): (
 
   observer.observe(document, config);
 
+  const ripples = document.querySelectorAll(`[${RippleDataOptions.root}]`);
+  /* eslint-disable-next-line */
+  if (ripples) Array.from(ripples).forEach((item: HTMLElement) => { new Ripple(item, rippleCustomOptions); });
+
   return observer.disconnect.bind(observer);
 }
 
